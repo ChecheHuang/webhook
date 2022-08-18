@@ -12,6 +12,6 @@ function App() {
     dispatch(update({ name, email }))
   }, [dispatch])
   console.log(userInfo)
-  return <div className="App">j我在給你一次機會</div>
+  return <div className="App">別卡住阿</div>
 }
 export default App
