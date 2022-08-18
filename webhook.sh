@@ -34,7 +34,7 @@ if [ -d "$gitPath" ]; then
         git pull 
         cd react
         echo "開始打包"
-        npm run build && cp -rp /home/ubuntu/webhook/react/build /home/ubuntu/webhook
+        #npm run build && cp -rp /home/ubuntu/webhook/react/build /home/ubuntu/webhook
        
         echo "我要結束了"
         exit
