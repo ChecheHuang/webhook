@@ -1,0 +1,41 @@
+@mixin dFlexCenter($width,$height) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $width;
+    height: $height;
+}
+
+@mixin positionCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// @mixin circle($size, $bgColor) {
+//     border-radius: 50%;
+//     height: $size;
+//     width: $size;
+//     font-size: $size/3;
+//     background: $bgColor;
+//     color: white;
+// }
+
+@mixin ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin ipad {
+    @media (max-width:768px) {
+        @content
+    }
+}
+
+@mixin iphone {
+    @media (max-width:568px) {
+        @content
+    }
+}
