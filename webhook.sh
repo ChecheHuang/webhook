@@ -12,7 +12,7 @@ echo "Start"
 #         exit
 # fi
 #git項目路徑
-gitPath=" /home/ubuntu/webhook"
+gitPath="/home/ubuntu/webhook"
 #git 網址
 gitHttp="https://github.com/ChecheHuang/webhook.git"
 
