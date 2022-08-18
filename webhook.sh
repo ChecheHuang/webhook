@@ -12,7 +12,7 @@ echo "Start"
 #         exit
 # fi
 #git項目路徑
-gitPath="/home/webhook"
+gitPath=" /home/ubuntu/webhook"
 #git 網址
 gitHttp="https://github.com/ChecheHuang/webhook.git"
 
@@ -33,6 +33,7 @@ if [ -d "$gitPath" ]; then
         git pull
         cd react
         npm run build
+        cp -rp /home/ubuntu/webhook/react/build /home/ubuntu/webhook
         echo "End"
         exit
 else
