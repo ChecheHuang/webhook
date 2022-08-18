@@ -20,6 +20,7 @@ echo "Web站點路徑：$gitPath"
 
 #判斷項目是否存在
 if [ -d "$gitPath" ]; then
+        echo "我要開始了"
         cd $gitPath
         #判斷是否存在git目錄
         if [ ! -d ".git" ]; then
@@ -32,7 +33,7 @@ if [ -d "$gitPath" ]; then
         #git reset --hard origin/master
         git pull && cd react && npm run build && cp -rp /home/ubuntu/webhook/react/build /home/ubuntu/webhook
         
-        echo "End"
+        echo "我要結束了"
         exit
 else
         echo "該項目路徑不存在"
