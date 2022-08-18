@@ -12,6 +12,6 @@ function App() {
     dispatch(update({ name, email }))
   }, [dispatch])
   console.log(userInfo)
-  return <div className="App">webhook</div>
+  return <div className="App">我這邊更新就要變拉</div>
 }
 export default App
