@@ -34,6 +34,7 @@ if [ -d "$gitPath" ]; then
         # cd react
         # npm run build
         # cp -rp /home/ubuntu/webhook/react/build /home/ubuntu/webhook
+        echo "很久很久"
         echo "End"
         exit
 else
