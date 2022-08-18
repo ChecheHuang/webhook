@@ -31,9 +31,9 @@ if [ -d "$gitPath" ]; then
         #拉取項目最新文件
         #git reset --hard origin/master
         git pull
-        cd react
-        npm run build
-        cp -rp /home/ubuntu/webhook/react/build /home/ubuntu/webhook
+        # cd react
+        # npm run build
+        # cp -rp /home/ubuntu/webhook/react/build /home/ubuntu/webhook
         echo "End"
         exit
 else
