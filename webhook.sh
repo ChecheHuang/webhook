@@ -34,7 +34,7 @@ if [ -d "$gitPath" ]; then
         git pull 
         cd client
         echo "開始打包"
-        npm run build && cp -rp /home/ubuntu/webhook/client/build /home/ubuntu/webhook
+        npm i && npm run build && cp -rp /home/ubuntu/webhook/client/build /home/ubuntu/webhook
        
         echo "我要結束了"
         exit
