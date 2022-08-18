@@ -23,12 +23,10 @@ app.get("/api/fail2ban",(req,res)=>{
   console.log(req.body)
   res.end("fail2ban success test")
 })
-app.get("/", function (req, res) {
+app.get("/*", function (req, res) {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
-app.get("/test", function (req, res) {
-  res.sendFile(path.join(__dirname, "build", "test.html"));
-});
+
 const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, () => {

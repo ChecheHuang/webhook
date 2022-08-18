@@ -31,6 +31,8 @@ if [ -d "$gitPath" ]; then
         #拉取項目最新文件
         #git reset --hard origin/master
         git pull
+        cd react
+        npm run build
         echo "End"
         exit
 else
