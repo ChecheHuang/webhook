@@ -12,6 +12,6 @@ function App() {
     dispatch(update({ name, email }))
   }, [dispatch])
   console.log(userInfo)
-  return <div className="App">sample</div>
+  return <div className="App">webhook</div>
 }
 export default App
