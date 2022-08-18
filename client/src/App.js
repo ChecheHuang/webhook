@@ -12,6 +12,6 @@ function App() {
     dispatch(update({ name, email }))
   }, [dispatch])
   console.log(userInfo)
-  return <div className="App">我會在看一次喔</div>
+  return <div className="App">再來一次</div>
 }
 export default App
