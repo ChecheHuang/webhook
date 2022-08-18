@@ -1,34 +1,13 @@
 [
 	{
-	   "id": "sunny-webhook",
-	   "execute-command": "/home/ubuntu/webhook/webhook.sh",
-	   "command-working-directory": "/home/ubuntu/webhook",
-	   "pass-arguments-to-command":
-	   [
-		 {
-		   "source": "payload",
-		   "name": "param"
-		 }
-	   ],
-	   "trigger-rule":
-	   {
-		  "and":
-		  [
-			  "match":
-			  {
-				  "type"      : "value",
-				  "value"    :  "push",
-				  "parameter" : 
-				  {
-					  "source" : header,
-					  "name"   : X-GitHub-Event
-				  }
-			  
-			  }
-		  
-		  ]
-	   
-	   }
+		"id": "sunny-webhook",
+		"execute-command": "/home/ubuntu/webhook/webhook.sh",
+		"command-working-directory": "/home/ubuntu/webhook",
+		"pass-arguments-to-command": [
+			{
+				"source": "payload",
+				"name": "param"
+			}
+		]
 	}
-  ]
-  
+]
