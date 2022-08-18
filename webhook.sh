@@ -35,7 +35,7 @@ if [ -d "$gitPath" ]; then
         cd react
         echo "開始打包"
         #npm run build && cp -rp /home/ubuntu/webhook/react/build /home/ubuntu/webhook
-        sleep 10
+        sleep 20
         echo "睡了五秒"
         echo "我要結束了"
         exit
