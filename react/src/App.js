@@ -12,6 +12,6 @@ function App() {
     dispatch(update({ name, email }))
   }, [dispatch])
   console.log(userInfo)
-  return <div className="App">不要不要卡住阿</div>
+  return <div className="App">煩死了</div>
 }
 export default App
