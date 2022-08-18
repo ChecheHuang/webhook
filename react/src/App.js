@@ -12,6 +12,6 @@ function App() {
     dispatch(update({ name, email }))
   }, [dispatch])
   console.log(userInfo)
-  return <div className="App">煩死了</div>
+  return <div className="App">我這邊在側一次喔</div>
 }
 export default App
