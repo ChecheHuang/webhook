@@ -19,9 +19,9 @@ app.post("/api/webhook", function (req, res) {
   console.log("被打ㄌ");
   res.send("webhook");
 });
-app.get("/api/fail2ban",(req,res)=>{
-  console.log(req.body)
-  res.end("fail2ban success test")
+app.get("/api/:id",(req,res)=>{
+  console.log(req.params.id)
+  res.end(`五秒內三次打${req.params.id}會被鎖住10秒`)
 })
 app.get("/*", function (req, res) {
   res.sendFile(path.join(__dirname, "build", "index.html"));
