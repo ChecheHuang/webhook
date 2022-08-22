@@ -21,7 +21,7 @@ app.post("/api/webhook", function (req, res) {
 });
 app.get("/api/:id",(req,res)=>{
   console.log(req.params.id)
-  res.end(`五秒內三次打${req.params.id}會被鎖住10秒`)
+  res.end(`If you try ${req.params.id} three times within five seconds, you will be locked for ten seconds `)
 })
 app.get("/*", function (req, res) {
   res.sendFile(path.join(__dirname, "build", "index.html"));
