@@ -1,17 +1,29 @@
 import './app.scss'
-import { useDispatch, useSelector } from 'react-redux'
-import { update } from './redux/userSlice'
-import { useEffect } from 'react'
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useParams,
+} from 'react-router-dom'
+
+function Home() {
+  return <div>Home</div>
+}
+function Test() {
+  let { id } = useParams()
+
+  return <div>{id}</div>
+}
 
 function App() {
-  const dispatch = useDispatch()
-  const userInfo = useSelector((state) => state.user.userInfo)
-  const name = 'carl'
-  const email = 'carl@gmail.com'
-  useEffect(() => {
-    dispatch(update({ name, email }))
-  }, [dispatch])
-  console.log(userInfo)
-  return <div className="App">成功!!!</div>
+  return (
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/test/:id" element={<Test />} />
+        <Route path="*" element={<div>404 not found</div>} />
+      </Routes>
+    </Router>
+  )
 }
 export default App
