@@ -1,26 +1,32 @@
-@mixin dFlexCenter($width,$height) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: $width;
-    height: $height;
+$main : #1CC8EE;
+$background1 : #1C1D1D;
+
+
+
+@mixin H1_TC {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 25px;
 }
 
-@mixin positionCenter {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+@mixin H2_TC {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
 }
 
-// @mixin circle($size, $bgColor) {
-//     border-radius: 50%;
-//     height: $size;
-//     width: $size;
-//     font-size: $size/3;
-//     background: $bgColor;
-//     color: white;
-// }
+@mixin H3_TC {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
 
 @mixin ellipsis {
     overflow: hidden;

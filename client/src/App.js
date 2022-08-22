@@ -1,29 +1,19 @@
 import './app.scss'
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  useParams,
-} from 'react-router-dom'
-
-function Home() {
-  return <div>Home</div>
-}
-function Test() {
-  let { id } = useParams()
-
-  return <div>{id}</div>
-}
-
+import { HashRouter, Route, Routes } from 'react-router-dom'
+import Home from './pages/Home/Home'
+import NearbyBus from './pages/NearbyBus/NearbyBus'
+import SearchBus from './pages/SearchBus/SearchBus'
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/test/:id" element={<Test />} />
-        <Route path="*" element={<div>404 not found</div>} />
-      </Routes>
-    </Router>
+    <>
+      <HashRouter>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/searchBus" element={<SearchBus />} />
+          <Route path="/nearbyBus/:id" element={<NearbyBus />} />
+        </Routes>
+      </HashRouter>
+    </>
   )
 }
 export default App
