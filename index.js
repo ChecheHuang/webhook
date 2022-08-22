@@ -21,7 +21,8 @@ app.post("/api/webhook", function (req, res) {
 });
 app.get("/api/:id",(req,res)=>{
   console.log(req.params.id)
-  res.end(`If you try ${req.params.id} three times within five seconds, you will be locked for ten seconds `)
+  const response = `URL is /api/${req.params.id},If you try this URL three times within five seconds, you will be locked for ten seconds`
+  res.end(response)
 })
 app.get("/*", function (req, res) {
   res.sendFile(path.join(__dirname, "build", "index.html"));
