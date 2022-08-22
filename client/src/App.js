@@ -11,6 +11,7 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route path="/searchBus" element={<SearchBus />} />
           <Route path="/nearbyBus/:id" element={<NearbyBus />} />
+          <Route path="*" element={<div>404 not found</div>}/>
         </Routes>
       </HashRouter>
     </>
